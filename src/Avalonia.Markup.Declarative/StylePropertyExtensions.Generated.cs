@@ -88,10 +88,6 @@ public static Style<AutoCompleteBox> TextSelector(this Style<AutoCompleteBox> st
 => style._addSetter(AutoCompleteBox.TextSelectorProperty, value);
 public static Style<AutoCompleteBox> TextSelector(this Style<AutoCompleteBox> style, IBinding binding)
 => style._addSetter(AutoCompleteBox.TextSelectorProperty, binding);
-public static Style<AutoCompleteBox> Items(this Style<AutoCompleteBox> style, IEnumerable value)
-=> style._addSetter(AutoCompleteBox.ItemsProperty, value);
-public static Style<AutoCompleteBox> Items(this Style<AutoCompleteBox> style, IBinding binding)
-=> style._addSetter(AutoCompleteBox.ItemsProperty, binding);
 public static Style<AutoCompleteBox> AsyncPopulator(this Style<AutoCompleteBox> style, Func<String,CancellationToken,Task<IEnumerable<Object>>> value)
 => style._addSetter(AutoCompleteBox.AsyncPopulatorProperty, value);
 public static Style<AutoCompleteBox> AsyncPopulator(this Style<AutoCompleteBox> style, IBinding binding)
@@ -605,10 +601,6 @@ public static Style<Image> StretchDirection(this Style<Image> style, IBinding bi
 }
 public static partial class ItemsControlExtensions
 {
-public static Style<T> Items<T>(this Style<T> style, IList value) where T : ItemsControl
-=> style._addSetter(ItemsControl.ItemsProperty, value);
-public static Style<T> Items<T>(this Style<T> style, IBinding binding) where T : ItemsControl
-=> style._addSetter(ItemsControl.ItemsProperty, binding);
 public static Style<T> ItemContainerTheme<T>(this Style<T> style, ControlTheme value) where T : ItemsControl
 => style._addSetter(ItemsControl.ItemContainerThemeProperty, value);
 public static Style<T> ItemContainerTheme<T>(this Style<T> style, IBinding binding) where T : ItemsControl
@@ -2376,23 +2368,3 @@ public static Style<T> TabIndex<T>(this Style<T> style, Int32 value) where T : I
 public static Style<T> TabIndex<T>(this Style<T> style, IBinding binding) where T : InputElement
 => style._addSetter(InputElement.TabIndexProperty, binding);
 }
-public static partial class ScrollGestureRecognizerExtensions
-{
-public static Style<ScrollGestureRecognizer> CanHorizontallyScroll(this Style<ScrollGestureRecognizer> style, Boolean value)
-=> style._addSetter(ScrollGestureRecognizer.CanHorizontallyScrollProperty, value);
-public static Style<ScrollGestureRecognizer> CanHorizontallyScroll(this Style<ScrollGestureRecognizer> style, IBinding binding)
-=> style._addSetter(ScrollGestureRecognizer.CanHorizontallyScrollProperty, binding);
-public static Style<ScrollGestureRecognizer> CanVerticallyScroll(this Style<ScrollGestureRecognizer> style, Boolean value)
-=> style._addSetter(ScrollGestureRecognizer.CanVerticallyScrollProperty, value);
-public static Style<ScrollGestureRecognizer> CanVerticallyScroll(this Style<ScrollGestureRecognizer> style, IBinding binding)
-=> style._addSetter(ScrollGestureRecognizer.CanVerticallyScrollProperty, binding);
-public static Style<ScrollGestureRecognizer> IsScrollInertiaEnabled(this Style<ScrollGestureRecognizer> style, Boolean value)
-=> style._addSetter(ScrollGestureRecognizer.IsScrollInertiaEnabledProperty, value);
-public static Style<ScrollGestureRecognizer> IsScrollInertiaEnabled(this Style<ScrollGestureRecognizer> style, IBinding binding)
-=> style._addSetter(ScrollGestureRecognizer.IsScrollInertiaEnabledProperty, binding);
-public static Style<ScrollGestureRecognizer> ScrollStartDistance(this Style<ScrollGestureRecognizer> style, Int32 value)
-=> style._addSetter(ScrollGestureRecognizer.ScrollStartDistanceProperty, value);
-public static Style<ScrollGestureRecognizer> ScrollStartDistance(this Style<ScrollGestureRecognizer> style, IBinding binding)
-=> style._addSetter(ScrollGestureRecognizer.ScrollStartDistanceProperty, binding);
-}
-

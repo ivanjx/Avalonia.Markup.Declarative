@@ -23,9 +23,8 @@ public class Config
         typeof(Dock),
     };
 
-    public Type[] Exclude = new[]
+    public Type[] Exclude = new Type[]
     {
-        typeof(ProgressBar.ProgressBarTemplateProperties)
     };
 
     /// <summary>

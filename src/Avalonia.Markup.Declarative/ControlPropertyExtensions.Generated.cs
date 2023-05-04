@@ -105,10 +105,6 @@ public static AutoCompleteBox TextSelector(this AutoCompleteBox control, IBindin
    => control._set(() => control[!AutoCompleteBox.TextSelectorProperty] = binding);
 public static AutoCompleteBox TextSelector(this AutoCompleteBox control, AutoCompleteSelector<String> value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(AutoCompleteBox.TextSelectorProperty, ps, () => control.TextSelector = value, bindingMode, converter, bindingSource);
 public static AutoCompleteBox TextSelector<TValue>(this AutoCompleteBox control, TValue value, FuncValueConverter<TValue, AutoCompleteSelector<String>> converter, BindingMode? bindingMode = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(AutoCompleteBox.TextSelectorProperty, ps, () => control.TextSelector = (AutoCompleteSelector<String>)converter.Convert(value,typeof(TValue), null, default), bindingMode, converter, bindingSource);
-public static AutoCompleteBox Items(this AutoCompleteBox control, IBinding binding)
-   => control._set(() => control[!AutoCompleteBox.ItemsProperty] = binding);
-public static AutoCompleteBox Items(this AutoCompleteBox control, IEnumerable value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(AutoCompleteBox.ItemsProperty, ps, () => control.Items = value, bindingMode, converter, bindingSource);
-public static AutoCompleteBox Items<TValue>(this AutoCompleteBox control, TValue value, FuncValueConverter<TValue, IEnumerable> converter, BindingMode? bindingMode = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(AutoCompleteBox.ItemsProperty, ps, () => control.Items = (IEnumerable)converter.Convert(value,typeof(TValue), null, default), bindingMode, converter, bindingSource);
 public static AutoCompleteBox AsyncPopulator(this AutoCompleteBox control, IBinding binding)
    => control._set(() => control[!AutoCompleteBox.AsyncPopulatorProperty] = binding);
 public static AutoCompleteBox AsyncPopulator(this AutoCompleteBox control, Func<String,CancellationToken,Task<IEnumerable<Object>>> value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(AutoCompleteBox.AsyncPopulatorProperty, ps, () => control.AsyncPopulator = value, bindingMode, converter, bindingSource);
@@ -660,10 +656,6 @@ public static Flyout FlyoutPresenterTheme<TValue>(this Flyout control, TValue va
 }
 public static partial class MenuFlyoutExtensions
 {
-public static MenuFlyout Items(this MenuFlyout control, IBinding binding)
-   => control._set(() => control[!MenuFlyout.ItemsProperty] = binding);
-public static MenuFlyout Items(this MenuFlyout control, IEnumerable value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(MenuFlyout.ItemsProperty, ps, () => control.Items = value, bindingMode, converter, bindingSource);
-public static MenuFlyout Items<TValue>(this MenuFlyout control, TValue value, FuncValueConverter<TValue, IEnumerable> converter, BindingMode? bindingMode = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(MenuFlyout.ItemsProperty, ps, () => control.Items = (IEnumerable)converter.Convert(value,typeof(TValue), null, default), bindingMode, converter, bindingSource);
 public static MenuFlyout ItemTemplate(this MenuFlyout control, IBinding binding)
    => control._set(() => control[!MenuFlyout.ItemTemplateProperty] = binding);
 public static MenuFlyout ItemTemplate(this MenuFlyout control, IDataTemplate value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null)=> control._setEx(MenuFlyout.ItemTemplateProperty, ps, () => control.ItemTemplate = value, bindingMode, converter, bindingSource);
@@ -728,12 +720,6 @@ public static Image StretchDirection<TValue>(this Image control, TValue value, F
 }
 public static partial class ItemsControlExtensions
 {
-public static T Items<T>(this T control, IBinding binding) where T : ItemsControl
-   => control._set(() => control[!ItemsControl.ItemsProperty] = binding);
-public static T Items<T>(this T control, IList value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null) where T : ItemsControl
-=> control._setEx(ItemsControl.ItemsProperty, ps, () => control.Items = value, bindingMode, converter, bindingSource);
-public static T Items<T,TValue>(this T control, TValue value, FuncValueConverter<TValue, IList> converter, BindingMode? bindingMode = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null) where T : ItemsControl
-=> control._setEx(ItemsControl.ItemsProperty, ps, () => control.Items = (IList)converter.Convert(value,typeof(TValue), null, default), bindingMode, converter, bindingSource);
 public static T ItemContainerTheme<T>(this T control, IBinding binding) where T : ItemsControl
    => control._set(() => control[!ItemsControl.ItemContainerThemeProperty] = binding);
 public static T ItemContainerTheme<T>(this T control, ControlTheme value = default, BindingMode? bindingMode = null, IValueConverter converter = null, object bindingSource = null, [CallerArgumentExpression("value")] string ps = null) where T : ItemsControl
