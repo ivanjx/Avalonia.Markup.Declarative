@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.0.999-cibuild0034206-beta" />
+    <PackageReference Include="Avalonia" Version="11.0.999-cibuild0034488-beta" />
   </ItemGroup>
 
 </Project>
