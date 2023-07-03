@@ -607,15 +607,6 @@ public static Style<T> ItemTemplate<T>(this Style<T> style, IBinding binding) wh
 => style._addSetter(ItemsControl.ItemTemplateProperty, binding);
 public static Style<T> DisplayMemberBinding<T>(this Style<T> style, IBinding value) where T : ItemsControl
 => style._addSetter(ItemsControl.DisplayMemberBindingProperty, value);
-//Skipped DisplayMemberBinding because already exist in value setters
-public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, Boolean value) where T : ItemsControl
-=> style._addSetter(ItemsControl.AreHorizontalSnapPointsRegularProperty, value);
-public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : ItemsControl
-=> style._addSetter(ItemsControl.AreHorizontalSnapPointsRegularProperty, binding);
-public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, Boolean value) where T : ItemsControl
-=> style._addSetter(ItemsControl.AreVerticalSnapPointsRegularProperty, value);
-public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : ItemsControl
-=> style._addSetter(ItemsControl.AreVerticalSnapPointsRegularProperty, binding);
 }
 public static partial class LabelExtensions
 {
@@ -1671,14 +1662,6 @@ public static Style<ItemsPresenter> ItemsPanel(this Style<ItemsPresenter> style,
 => style._addSetter(ItemsPresenter.ItemsPanelProperty, value);
 public static Style<ItemsPresenter> ItemsPanel(this Style<ItemsPresenter> style, IBinding binding)
 => style._addSetter(ItemsPresenter.ItemsPanelProperty, binding);
-public static Style<ItemsPresenter> AreHorizontalSnapPointsRegular(this Style<ItemsPresenter> style, Boolean value)
-=> style._addSetter(ItemsPresenter.AreHorizontalSnapPointsRegularProperty, value);
-public static Style<ItemsPresenter> AreHorizontalSnapPointsRegular(this Style<ItemsPresenter> style, IBinding binding)
-=> style._addSetter(ItemsPresenter.AreHorizontalSnapPointsRegularProperty, binding);
-public static Style<ItemsPresenter> AreVerticalSnapPointsRegular(this Style<ItemsPresenter> style, Boolean value)
-=> style._addSetter(ItemsPresenter.AreVerticalSnapPointsRegularProperty, value);
-public static Style<ItemsPresenter> AreVerticalSnapPointsRegular(this Style<ItemsPresenter> style, IBinding binding)
-=> style._addSetter(ItemsPresenter.AreVerticalSnapPointsRegularProperty, binding);
 }
 public static partial class ScrollContentPresenterExtensions
 {
@@ -1757,10 +1740,6 @@ public static Style<TextPresenter> PreeditText(this Style<TextPresenter> style, 
 => style._addSetter(TextPresenter.PreeditTextProperty, value);
 public static Style<TextPresenter> PreeditText(this Style<TextPresenter> style, IBinding binding)
 => style._addSetter(TextPresenter.PreeditTextProperty, binding);
-public static Style<TextPresenter> CompositionRegion(this Style<TextPresenter> style, Nullable<TextRange> value)
-=> style._addSetter(TextPresenter.CompositionRegionProperty, value);
-public static Style<TextPresenter> CompositionRegion(this Style<TextPresenter> style, IBinding binding)
-=> style._addSetter(TextPresenter.CompositionRegionProperty, binding);
 public static Style<TextPresenter> TextAlignment(this Style<TextPresenter> style, TextAlignment value)
 => style._addSetter(TextPresenter.TextAlignmentProperty, value);
 public static Style<TextPresenter> TextAlignment(this Style<TextPresenter> style, IBinding binding)
