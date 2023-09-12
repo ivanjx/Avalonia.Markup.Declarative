@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<IsPackable>true</IsPackable>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="bin\Debug\net7.0\/Avalonia.Markup.Declarative.SourceGenerator.dll" />
+	  <None Remove="bin\Debug\net8.0\/Avalonia.Markup.Declarative.SourceGenerator.dll" />
 	</ItemGroup>
 
 	<ItemGroup>
