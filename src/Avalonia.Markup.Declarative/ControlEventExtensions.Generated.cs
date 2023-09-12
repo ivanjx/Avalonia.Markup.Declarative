@@ -16,6 +16,7 @@ using Avalonia.Styling;
 using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 
@@ -276,9 +277,6 @@ public static partial class WindowBaseEventsExtensions
         control._setEvent((EventHandler<PixelPointEventArgs>) ((_, args) => action(args)), h => control.PositionChanged += h);
     public static WindowBase OnResized(this WindowBase control, Action<WindowResizedEventArgs> action) => 
         control._setEvent((EventHandler<WindowResizedEventArgs>) ((_, args) => action(args)), h => control.Resized += h);
-}
-public static partial class ItemsPresenterEventsExtensions
-{
 }
 public static partial class TextPresenterEventsExtensions
 {

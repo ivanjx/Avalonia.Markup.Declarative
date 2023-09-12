@@ -16,13 +16,13 @@ using Avalonia.Input;
 using Avalonia.Input.GestureRecognizers;
 using Avalonia.Layout;
 using Avalonia.Media;
-using Avalonia.Media.TextFormatting;
 using Avalonia.Platform;
 using Avalonia.Styling;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -607,6 +607,7 @@ public static Style<T> ItemTemplate<T>(this Style<T> style, IBinding binding) wh
 => style._addSetter(ItemsControl.ItemTemplateProperty, binding);
 public static Style<T> DisplayMemberBinding<T>(this Style<T> style, IBinding value) where T : ItemsControl
 => style._addSetter(ItemsControl.DisplayMemberBindingProperty, value);
+//Skipped DisplayMemberBinding because already exist in value setters
 }
 public static partial class LabelExtensions
 {
@@ -1309,6 +1310,10 @@ public static Style<ToggleSwitch> OnContentTemplate(this Style<ToggleSwitch> sty
 => style._addSetter(ToggleSwitch.OnContentTemplateProperty, value);
 public static Style<ToggleSwitch> OnContentTemplate(this Style<ToggleSwitch> style, IBinding binding)
 => style._addSetter(ToggleSwitch.OnContentTemplateProperty, binding);
+public static Style<ToggleSwitch> KnobTransitions(this Style<ToggleSwitch> style, Transitions value)
+=> style._addSetter(ToggleSwitch.KnobTransitionsProperty, value);
+public static Style<ToggleSwitch> KnobTransitions(this Style<ToggleSwitch> style, IBinding binding)
+=> style._addSetter(ToggleSwitch.KnobTransitionsProperty, binding);
 }
 public static partial class TopLevelExtensions
 {
